@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet, ViewStyle, TextStyle } from "react-native";
+import { View, Text, ViewStyle, TextStyle } from "react-native";
+import Hello from './Hello';
 
 interface Props {
 
@@ -14,21 +15,18 @@ export default class App extends Component<Props, State> {
         return (
             <View style={styles.container}>
                 <Text style={styles.welcome}>
-                    Welcome to React Native
+                    Welcome to React Native!
                 </Text>
                 <Text style={styles.instructions}>
-                    To get started, edit index.ios.js
+                    To get started, edit index.js
                 </Text>
-                <Text style={styles.instructions}>
-                    Press Cmd+R to reload, {"\n"}
-                    Cmd+D or shake for dev menu
-                </Text>
+               <Hello word={'中国'} />
             </View>
         );
     }
 }
 
-const styles = StyleSheet.create({
+const styles = {
     container: {
         flex: 1,
         justifyContent: "center",
@@ -47,4 +45,4 @@ const styles = StyleSheet.create({
         color: "#333333",
         marginBottom: 5,
     } as TextStyle,
-});
+};
